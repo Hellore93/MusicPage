@@ -1,0 +1,31 @@
+$color-dark: #131313;
+$color-light: #fff;
+$color-grey: #bfbfbf;
+$color-red: #cf383e;
+
+.template-song-list{
+  justify-content: center;
+}
+
+.template-song{
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  .foot{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  p, .categories, .rank{
+    color: $color-light;
+    font-size: 15px;
+    justify-content: center;
+  }
+
+  .player{
+    display: block;
+    height: 50px;
+  }
+}

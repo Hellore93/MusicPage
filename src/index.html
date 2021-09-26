@@ -8,17 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section class="main-page">
+    <section class="header">
         <div class="head-page">
-            <h1 class="main-headline">TASTE</h1>
+            <h1 class="main-headline"> TASTE</h1>
             <p class="head-text">ENGAGE</p>
             <p class="head-text">IN</p>
             <p class="head-text">ART</p>
         </div>
     </section>
+
+    <div class="main-nav">
+        <div class="#home">home</div>
+        <div class="#search">search</div>
+        <div class="#discover">discover</div>
+    </div>
+
+    <section id="song">
+        <div id="song-list" class="song-list container"></div>
+    </section>
+
+
+    <div class="ready-player-1 player">
+    <audio crossorigin preload="none">
+        <source src="./songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+    <script id="template-home-page" type="text/x-handlebars-template">
+    </script>
+
+    <script id="template-song-list" class="template-song-list" type="text/x-handlebars-template">
+        <div class="template-song">
+            <header class="song_header main-headline">
+                <p class="song_description no-spacing">{{author}} - {{title}}</p>
+            </header>
+            <div class="player-script">
+                <audio crossorigin preload="none">
+                    {{{song}}}
+                </audio>
+            </div>
+            <div class="foot">
+                <div class="categories">Categories: {{categories}}</div>
+                <div class="rank">#{{ranking}} in the ranking</div>
+            </div>
+        </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
     <script src="./js/app.js" type="module"></script>
 </body>
 </html>
